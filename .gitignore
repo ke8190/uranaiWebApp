@@ -31,3 +31,25 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Eclipse project files
+.project
+.classpath
+.settings/
+.metadata/
+
+# Compiled files
+build/
+bin/
+target/
+
+# IntelliJ project files
+.idea/
+*.iml
+
+# Java specific
+*.class
+*.jar
+
+# Pleiades specific
+pleiades/
