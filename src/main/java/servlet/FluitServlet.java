@@ -8,6 +8,7 @@ import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import ex.Fluit;
 
@@ -20,7 +21,12 @@ public class FluitServlet extends HttpServlet {
 		Fluit fluit = new Fluit("いちご", 700);
 		
 		//リクエストスコープに格納
-		request.setAttribute("fluit", fluit);
+		//request.setAttribute("fluit", fluit);
+		
+		//セッションスコープに格納
+		HttpSession session = request.getSession();
+		session.setAttribute("fluit", fluit);
+		
 		
 		//fluit.jspにフォワード
 		RequestDispatcher dispatcher = request.getRequestDispatcher("WEB-INF/ex/fluit.jsp");

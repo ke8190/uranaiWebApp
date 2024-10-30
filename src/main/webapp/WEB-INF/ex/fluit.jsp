@@ -3,7 +3,7 @@
     
 <%@ page import="ex.Fluit" %>
 <% 
-	Fluit fluit =  (Fluit)response.getAttribute("fluit");
+	Fluit fluit =  (Fluit)session.getAttribute("fluit");
 %>
 
 <!DOCTYPE html>
